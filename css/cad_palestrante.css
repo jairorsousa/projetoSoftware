@@ -1,0 +1,33 @@
+		body{
+			margin:0px;
+			background-color: #2c363f;
+		}
+		section{
+			position: absolute;
+			background-color: #fff;
+			border-radius: 30px;
+			vertical-align: center;
+			width: 50%;
+			height: auto;
+			margin: 7% 25% 5% 25%;
+		}
+
+		section > img{
+			width: 70%;
+			margin: 5% 15% 0% 15%;
+			border-bottom: 2px solid #2c353f ;
+		}
+		section > h1{
+			font-family: arial;
+			font-size: 125%;
+			margin: 3% 5% 2% 5%;
+			text-align: center;
+		}
+		section > form{
+			width: 70%;
+			margin: 7% 15% 5% 15%;
+		}
+		section > form > label{
+			font-family: arial;
+			font-size: 90%;
+		}

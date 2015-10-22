@@ -1,0 +1,8 @@
+.btnForm{
+    background-color: #2C353F;
+   margin-left: 40%;
+}
+.btnForm:hover{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #2C353F;
+}
+

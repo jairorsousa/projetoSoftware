@@ -1,0 +1,61 @@
+body{font-family: 'Open Sans', sans-serif;}
+input, select, textarea{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+
+}
+button{
+    width: 100px;
+    background: #cccccc;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #cccccc;
+}
+input[type = submit]{
+
+    background: #cccccc;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 10px 5px;
+
+}
+input[type = submit]:hover{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #cccccc;
+}
+table {
+
+    width: 100%;
+    border-collapse:
+    collapse; border-spacing: 0;
+}
+
+td, th { border: 1px solid #CCC; height: 30px; }
+
+thead {
+    background: #F3F3F3;
+    font-weight: bold;
+}
+
+td {
+
+    text-align: center;
+}
+tr:hover{
+    background: #F3F3F3;
+}
