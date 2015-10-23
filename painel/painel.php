@@ -36,7 +36,7 @@ endif;
 <header>
     <h1 class="logomarca">SIGEA | Deep Day</h1>
     <ul class="systema_nav radius">
-        <li><a class="icon logout radius" href="painel.php?logoff=true">Sair</a></li>
+        <li><a class="icon logout radius" href="painel.php?logoff=true">Sair&nbsp; <i class="fa fa-power-off"></i></a></li>
     </ul>
 
 </header>
@@ -45,42 +45,23 @@ endif;
         <img src="../img/perfil.png">
         <h4 align="center"><?= $userlogin['nome']; ?></h4>
         <p align="center"><?php if($userlogin['nivel'] == 4){
-                echo 'Desenvolvedor';}elseif($userlogin['nivel'] == 3){
-                echo 'Administrador';}elseif($userlogin['nivel'] == 2){
+                echo 'Desenvolvedor';
+                $acesso =  "dashboard";
+            }elseif($userlogin['nivel'] == 3){
+                echo 'Administrador';
+                $acesso =  "dashboard";}elseif($userlogin['nivel'] == 2){
                 echo 'Organizador';}else{
                 echo "Palestrante";
+                $acesso  =  "dashboardPal";
             }
 
             ?></p>
     </section>
-    <section class="navegacao-nome">
-        <p> Navegação</p>
-    </section>
-    <section onclick="window.location.assign('painel.php');" class="navegacao">
-        <p><i class="fa fa-building"></i> Painel</p>
-    </section>
-    <section onclick="window.location.assign('palestrante.php');" class="navegacao">
-        <p><i class="fa fa-street-view"></i> Palestrantes</p>
-    </section>
-    <section onclick="window.location.assign('minicurso.php');" class="navegacao">
-        <p><i class="fa fa-file-text"></i> Minicursos</p>
-    </section>
-    <section onclick="window.location.assign('palestra.php');"class="navegacao">
-        <p><i class="fa fa-file-powerpoint-o"></i> Palestras</p>
-    </section>
-    <section  onclick="window.location.assign('aluno.php');" class="navegacao">
-        <p><i class="fa fa-users"></i> Alunos</p>
-    </section>
-
-
-
-
-</section>
 
 
                <?php
 
-       include_once '../app/View/dashboard.php';
+               include_once '../app/View/'.$acesso .'.php';
 
         ?>
 

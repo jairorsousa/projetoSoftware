@@ -28,44 +28,42 @@
     <table>
         <thead>
         <tr>
-            <td style="display: none;">Cod</td>
-            <td>Data</td>
-            <td>Nome</td>
+
+            <td>Palestrante</td>
             <td>Titulo</td>
-            <td>Anexos</td>
-            <td>Aprovar</td>
-            <td>Reprovar</td>
+            <td>Data</td>
+            <td>Horário</td>
 
         </tr>
         </thead>
         <?php
-         $ver = new Read();
-         $ver->FullRead("SELECT pessoas.nome, trabalhos.titulo, trabalhos.anexo, trabalhos.data_submetido, trabalhos.codigo
+        $ver = new Read();
+        $ver->FullRead("SELECT pessoas.nome, trabalhos.titulo
 FROM autor_trabalho
 INNER JOIN pessoas ON autor_trabalho.codigo_autor = pessoas.codigo
 INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
-WHERE  status = 'N'");
+WHERE  tipo_atividade = 2 and status = 'a'");
         foreach($ver->getResult() as $result):
-          extract($result);
-        ?>
+            extract($result);
+            ?>
             <tr>
-                <td style="display: none;"><?=$codigo?></td>
-                <td><?=$data_submetido?></td>
+
                 <td><?=$nome?></td>
                 <td><?=$titulo?></td>
-                <td><a href="http://www.cliqueplay.com.br/sigea/uploads/<?=$anexo?>" target="_blank">Visualizar</a></td>
-                <td><a href="../p.php?c=TrabalhoC&m=ApTrabalho&p=<?=$codigo?>">Aprovar</a></td>
-                <td><a href="#">Reprovar</a></td>
+                <td></td>
+                <td></td>
+
 
             </tr>
 
 
-        <?php
+            <?php
 
 
         endforeach;
         ?>
 
     </table>
-    </section>
+</section>
+
 

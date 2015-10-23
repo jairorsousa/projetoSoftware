@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/View/banner.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/View/dashboardPal.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/View/menuAd.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/View/menuPal.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/View/minicurso.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/View/palestra.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/View/palestrante.php" charset="UTF-8" />
+  </component>
+</project>

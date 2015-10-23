@@ -21,7 +21,7 @@
      <h1 align="center"><i class="fa fa-graduation-cap"></i>&nbsp;SIGEA</h1>
      <h3 align="center">Sistema de Gerênciamento de Eventos Acadêmicos</h3>
      <div class="butoes">
-     <a href="http://www.cliqueplay.com.br/sigea/painel/"><button>Login &nbsp;<i class="fa fa-user"></i></button></a>
+     <a href="http://www.profile.vc/sigea/painel/"><button>Login &nbsp;<i class="fa fa-user"></i></button></a>
 
      <a href="s.php?c=PessoaC&m=index"><button>Submeter Trabalhos &nbsp; <i class="fa fa-upload"></i></button></a>
      </div>

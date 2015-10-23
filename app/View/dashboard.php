@@ -68,6 +68,29 @@
 
 
   </style>
+
+<section class="navegacao-nome">
+    <p> Navegação</p>
+</section>
+<section onclick="window.location.assign('painel.php');" class="navegacao">
+    <p><i class="fa fa-building"></i> Painel</p>
+</section>
+<section onclick="window.location.assign('palestrante.php');" class="navegacao">
+    <p><i class="fa fa-street-view"></i> Palestrantes</p>
+</section>
+<section onclick="window.location.assign('minicurso.php');" class="navegacao">
+    <p><i class="fa fa-file-text"></i> Minicursos</p>
+</section>
+<section onclick="window.location.assign('palestra.php');"class="navegacao">
+    <p><i class="fa fa-file-powerpoint-o"></i> Palestras</p>
+</section>
+<section  onclick="window.location.assign('aluno.php');" class="navegacao">
+    <p><i class="fa fa-users"></i> Alunos</p>
+</section>
+
+</section>
+
+
  <section id="box">
      <section onclick="window.location='aluno.php';" class="info">
          <h1><i class="fa fa-users"></i></h1>
@@ -84,18 +107,19 @@
          <p align="center">Palestrantes</p>
 
      </section>
-     <section onclick="window.location='palestra.php';" class="info">
-         <h1><i class="fa fa-file-powerpoint-o"></i></h1>
-         <div id="border">q</div>
-         <p align="center" class="total"><?=$totalPalestras?></p>
-         <p align="center">Palestras</p>
-     </section>
+
      <section onclick="window.location='minicurso.php';" class="info">
 
          <h1><i class="fa fa-file-text"></i></h1>
          <div id="border">q</div>
          <p align="center" class="total"><?=$totalMiniCurso?></p>
          <p align="center">MiniCurso</p>
+     </section>
+     <section onclick="window.location='palestra.php';" class="info">
+         <h1><i class="fa fa-file-powerpoint-o"></i></h1>
+         <div id="border">q</div>
+         <p align="center" class="total"><?=$totalPalestras?></p>
+         <p align="center">Palestras</p>
      </section>
      <section onclick="window.location='banner.php';" class="info">
          <h1><i class="fa fa-square"></i></h1>

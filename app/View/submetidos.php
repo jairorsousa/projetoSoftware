@@ -53,9 +53,9 @@ WHERE  status = 'N'");
                 <td><?=$data_submetido?></td>
                 <td><?=$nome?></td>
                 <td><?=$titulo?></td>
-                <td><a href="http://www.cliqueplay.com.br/sigea/uploads/<?=$anexo?>" target="_blank">Visualizar</a></td>
-                <td><a href="../p.php?c=TrabalhoC&m=ApTrabalho&p=<?=$codigo?>">Aprovar</a></td>
-                <td><a href="#">Reprovar</a></td>
+                <td><a href="http://www.profile.vc/sigea/uploads/<?=$anexo?>" target="_blank"><i class="fa fa-file-pdf-o"></i></a></td>
+                <td><a href="../p.php?c=TrabalhoC&m=ApTrabalho&p=<?=$codigo?>"><i class="fa fa-check"></i></a></td>
+                <td><a href="#"><i class="fa fa-times"></i></a></td>
 
             </tr>
 

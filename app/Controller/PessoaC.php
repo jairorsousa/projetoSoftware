@@ -28,11 +28,11 @@ class PessoaC{
         $pessoa->ExeCreate($this->dados);
         if($pessoa->getResult()){
             $this->id = $pessoa->getResult();
-            echo "<script>window.location.assign('http://www.cliqueplay.com.br/sigea/p.php?c=PessoaC&m=Trabalho&p=$this->id')</script>";
+            echo "<script>window.location.assign('http://http://www.profile.vc/sigea/p.php?c=PessoaC&m=Trabalho&p=$this->id')</script>";
         }else{
             echo $pessoa->getMsg();
 
-            echo "<script>window.location.assign('http://www.cliqueplay.com.br/sigea/s.php?c=PessoaC&m=index')</script>";
+            echo "<script>window.location.assign('http://http://www.profile.vc/sigea/s.php?c=PessoaC&m=index')</script>";
         }
     }
 
@@ -110,7 +110,7 @@ include_once 'app/View/footer.php';
         $cadastraAT->ExeCreate('autor_trabalho', $DadosAT);
 
         echo "<script>alert('Seu trabalho foi submetido com sucesso. Aguarde nosso contato');</script>";
-        echo "<script>window.location.assign('http://www.cliqueplay.com.br/sigea')</script>";
+        echo "<script>window.location.assign('http://www.profile.vc/sigea')</script>";
 
 
     }

@@ -42,7 +42,7 @@
 FROM autor_trabalho
 INNER JOIN pessoas ON autor_trabalho.codigo_autor = pessoas.codigo
 INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
-WHERE  tipo_atividade = 1 and status = 'a'");
+WHERE  tipo_atividade = 3 and status = 'a'");
         foreach($ver->getResult() as $result):
             extract($result);
             ?>

@@ -6,14 +6,14 @@
  * Time: 17:01
  */
 
-define('BASE', 'http://www.cliqueplay.com.br/sigea/');
+define('BASE', 'http://www.profile.vc/sigea/');
 
 
 // CONFIGRAÇÕES DO SITE ####################
-define('HOST', 'mysql.hostinger.com.br');
-define('USER', 'u624016267_sigea');
+define('HOST', 'mysql524.umbler.com');
+define('USER', 'sigea');
 define('PASS', 'sigea@321');
-define('DBSA', 'u624016267_sigea');
+define('DBSA', 'sigea');
 
 // AUTO LOAD DE CLASSES ####################
 function __autoload($Class) {

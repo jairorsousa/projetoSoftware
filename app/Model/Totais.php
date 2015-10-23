@@ -4,12 +4,16 @@ class Totais{
 
     public static function Palestrante(){
         $read = new Read ();
-        $read->ExeRead('pessoas');
+        $read->FullRead("SELECT *
+FROM autor_trabalho
+INNER JOIN pessoas ON autor_trabalho.codigo_autor = pessoas.codigo
+INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
+WHERE  trabalhos.status = 'a'");
         return $read->getRowCount();
     }
     public static function Alunos(){
         $read = new Read ();
-        $read->ExeRead('pessoas');
+        $read->ExeRead('pessoas', "where nivel = 0");
         return $read->getRowCount();
     }
     public static function Minicurso(){
