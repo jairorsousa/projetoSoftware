@@ -6,7 +6,7 @@
  * Time: 17:01
  */
 
-define('BASE', 'http://www.profile.vc/sigea/');
+define('BASE', 'http://www.deepday.com.br/sigea/');
 
 
 // CONFIGRAÇÕES DO SITE ####################

@@ -12,14 +12,28 @@ class TrabalhoC{
 
     public  function ApTrabalho($Cod){
 
+    $this->Cod = $Cod;
+    $update = new Update();
+    $Dados = [
+        "status" => "A"
+    ];
+    $update->ExeUpdate('trabalhos', $Dados,"where codigo = :c", "c={$this->Cod}");
+    if($update->getResult()){
+        echo "<script>alert('Trabalho Aprovado Com Sucesso!');</script>";
+        echo "<script>window.location.assign('painel/submetidos.php')</script>";
+    }
+
+}
+    public  function ReTrabalho($Cod){
+
         $this->Cod = $Cod;
         $update = new Update();
         $Dados = [
-            "status" => "A"
+            "status" => "R"
         ];
         $update->ExeUpdate('trabalhos', $Dados,"where codigo = :c", "c={$this->Cod}");
         if($update->getResult()){
-            echo "<script>alert('Trabalho Aprovado Com Sucesso!');</script>";
+            echo "<script>alert('Trabalho Reprovado Com Sucesso!');</script>";
             echo "<script>window.location.assign('painel/submetidos.php')</script>";
         }
 

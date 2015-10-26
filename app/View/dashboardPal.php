@@ -14,9 +14,9 @@ INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
 WHERE  pessoas.codigo = {$idpalestrante}");
 foreach($statustra->getResult() as $cat):
     extract($cat);
-   if($status == 'n'){
+   if($status == 'N'){
        $resultado = 'Seu Trabalho esta sendo avaliado';
-   }elseif($status == 'r'){
+   }elseif($status == 'R'){
        $resultado = 'Seu Trabalho não foi Aprovado';
    }else{
        $resultado = 'Parabéns seu Trabalho foi Aprovado';

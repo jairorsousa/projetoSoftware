@@ -53,9 +53,9 @@ WHERE  status = 'N'");
                 <td><?=$data_submetido?></td>
                 <td><?=$nome?></td>
                 <td><?=$titulo?></td>
-                <td><a href="http://www.profile.vc/sigea/uploads/<?=$anexo?>" target="_blank"><i class="fa fa-file-pdf-o"></i></a></td>
-                <td><a href="../p.php?c=TrabalhoC&m=ApTrabalho&p=<?=$codigo?>"><i class="fa fa-check"></i></a></td>
-                <td><a href="#"><i class="fa fa-times"></i></a></td>
+                <td><a title="Ver Anexo" href="../uploads/<?=$anexo?>" target="_blank"><i class="fa fa-file-pdf-o"></i></a></td>
+                <td><a title="Aprovar Trabalho " href="../p.php?c=TrabalhoC&m=ApTrabalho&p=<?=$codigo?>"><i class="fa fa-check"></i></a></td>
+                <td><a title="Reprovar Trabalho" href="../p.php?c=TrabalhoC&m=ReTrabalho&p=<?=$codigo?>"><i class="fa fa-times"></i></a></td>
 
             </tr>
 
