@@ -29,7 +29,7 @@ WHERE  trabalhos.status = 'a'");
     }
     public static function Trabalhos(){
         $read = new Read ();
-        $read->ExeRead('trabalhos');
+        $read->ExeRead('trabalhos', "where status = :s", "s='N'");
         return $read->getRowCount();
     }
     public static function Palestras(){

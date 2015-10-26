@@ -4,7 +4,7 @@
 }
 
 body{font-family: 'Open Sans', sans-serif;}
-body.painel{background: url(../../img/back.png) repeat #fbfbfb;}
+body{background: url(../../img/back.png) repeat #f2f2f2;}
 header{
     background: #33414E;
     width: 100%;
