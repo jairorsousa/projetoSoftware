@@ -47,29 +47,6 @@ endforeach;
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .total{
-        font-size: 30px;
-        color:#1C3D50;
-    }
-    #border{
-        border-left: 2px solid #ccc;
-        float: left;
-        height: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-        width: 5px;
-        text-indent: 9999px;
-    }
-    .submetidos{
-        width: 200px;
-        float: left;
-        margin-right: 10px;
-        background: #fff;
-        -moz-box-shadow: 0 0 5px #888;
-        -webkit-box-shadow: 0 0 5px#888;
-        box-shadow: 0 0 5px #888;
-    }
 
 
 </style>
@@ -77,16 +54,16 @@ endforeach;
 <section class="navegacao-nome">
     <p> Navegação</p>
 </section>
-<section class="navegacao">
+<section onclick="window.location.assign('painel.php')" class="navegacao">
     <p><i class="fa fa-building"></i> Painel</p>
 </section>
 <section class="navegacao">
     <p><i class="fa fa-street-view"></i>Perfil</p>
 </section>
-<section  class="navegacao">
+<section onclick="window.location.assign('trabalhos.php')" class="navegacao">
     <p><i class="fa fa-file-text"></i>Trabalhos</p>
 </section>
-<section class="navegacao">
+<section onclick="loadAluno()" class="navegacao">
     <p><i class="fa fa-users"></i>Alunos</p>
 </section>
 <section class="navegacao">
@@ -104,6 +81,30 @@ endforeach;
 
 
 </section>
+
+
     </section>
+<script>
+    function loadTrabalho() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                document.getElementById("box").innerHTML = xhttp.responseText;
+            }
+        }
+        xhttp.open("GET", "loadAjax/trabalho.php", true);
+        xhttp.send();
+    }
+    function loadAluno() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                document.getElementById("box").innerHTML = xhttp.responseText;
+            }
+        }
+        xhttp.open("GET", "loadAjax/alunos.php", true);
+        xhttp.send();
+    }
+</script>
 
 
