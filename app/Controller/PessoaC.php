@@ -109,6 +109,26 @@ include_once 'app/View/footer.php';
 
         $cadastraAT->ExeCreate('autor_trabalho', $DadosAT);
 
+
+        // pega dados da pessoa
+        $pessoa= new Read();
+        $pessoa->ExeRead('pessoas', "where codigo = :id", "id={$this->dados['idPes']}");
+        foreach($pessoa->getResult() as $resulPes){
+            extract($resulPes);
+            //Enviar o Email.
+            $enviarEmail = new Email();
+            $DadosEmail = [
+                "Assunto" => "Confirmação da Submição de Trabalho DeepDay",
+                "Mensagem" => "Seu Trabalho foi submetido com sucesso.",
+                "RemetenteNome" => "Equipe DeepDay",
+                "RemetenteEmail" => "atendimento@deepday.com.br",
+                "DestinoNome" => $nome,
+                "DestinoEmail" => $email
+            ];
+            $enviarEmail->Enviar($DadosEmail) ;
+        }
+
+
         echo "<script>alert('Seu trabalho foi submetido com sucesso!');</script>";
         echo "<script>window.location.assign('".BASE."/painel')</script>";
 

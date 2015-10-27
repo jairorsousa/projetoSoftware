@@ -1,12 +1,12 @@
 <?php
 require('Library/PhpMailler/class.phpmailer.php');
 require('Library/PhpMailler/class.smtp.php');
-require_once ('../Config.inc.php' );
+require_once ('app/Config.inc.php' );
 
 
 /**
  * Email [ MODEL ]
- * Modelo respon·vel por configurar a PHPMailer, validar os dados e disparar e-mails do sistema!
+ * Modelo respon√°vel por configurar a PHPMailer, validar os dados e disparar e-mails do sistema!
  */
 class Email {
 
@@ -42,11 +42,11 @@ class Email {
 	}
 
 	/**
-	 * <b>Enviar E-mail SMTP:</b> Envelope os dados do e-mail em um array atribuitivo para povoar o mÈtodo.
-	 * Com isso execute este para ter toda a validaÁ„o de envio do e-mail feita automaticamente.
+	 * <b>Enviar E-mail SMTP:</b> Envelope os dados do e-mail em um array atribuitivo para povoar o m√©todo.
+	 * Com isso execute este para ter toda a valida√ß√£o de envio do e-mail feita automaticamente.
 	 *
-	 * <b>REQUER DADOS ESPECÕFICOS:</b> Para enviar o e-mail vocÍ deve montar um array atribuitivo com os
-	 * seguintes Ìndices corretamente povoados:<br><br>
+	 * <b>REQUER DADOS ESPEC√çFICOS:</b> Para enviar o e-mail voc√™ deve montar um array atribuitivo com os
+	 * seguintes √≠ndices corretamente povoados:<br><br>
 	 * <i>
 	 * &raquo; Assunto<br>
 	 * &raquo; Mensagem<br>
@@ -64,7 +64,7 @@ class Email {
 			$this->Error = ['Erro ao enviar mensagem: Para enviar esse e-mail. Preencha os campos requisitados!'];
 			$this->Result = false;
 		elseif (!Check::Email($this->Data['RemetenteEmail'])):
-			$this->Error = ['Erro ao enviar mensagem: O e-mail que vocÍ informou n„o tem um formato v·lido. Informe seu E-mail!'];
+			$this->Error = ['Erro ao enviar mensagem: O e-mail que voc√™ informou n√£o tem um formato v√°lido. Informe seu E-mail!'];
 			$this->Result = false;
 		else:
 			$this->setMail();
@@ -74,7 +74,7 @@ class Email {
 	}
 
 	/**
-	 * <b>Verificar Envio:</b> Executando um getResult È possÌvel verificar se foi ou n„o efetuado
+	 * <b>Verificar Envio:</b> Executando um getResult √© poss√≠vel verificar se foi ou n√£o efetuado
 	 * o envio do e-mail. Para mensagens execute o getError();
 	 * @return BOOL $Result = TRUE or FALSE
 	 */
@@ -96,7 +96,7 @@ class Email {
 	 * ***************************************
 	 */
 
-	//Limpa cÛdigo e espaÁos!
+	//Limpa c√≥digo e espa√ßos!
 	private function Clear() {
 		array_map('strip_tags', $this->Data);
 		array_map('trim', $this->Data);
@@ -152,3 +152,19 @@ class Email {
 
 
 }
+
+/*
+ *
+ * DEBUGANDO O EMAIL.
+ * $teste = new Email();
+$Dados =[
+	"Assunto" => "Confirma√ß√£o da Submi√ß√£o de Trabalho DeepDay",
+	"Mensagem" => "Ol√° Diego, Seu Trabalho foi submetido com sucesso.",
+	"RemetenteNome" => "Equipe DeepDay",
+	"RemetenteEmail" => "atendimento@deepday.com.br",
+	"DestinoNome" => "Diego Silva",
+	"DestinoEmail" => "diegossilva1010@gmail.com"
+];
+$teste->Enviar($Dados);
+var_dump($teste);*/
+

@@ -9,17 +9,17 @@
 define('BASE', 'http://www.deepday.com.br/sigea/');
 
 
-// CONFIGRAÇÕES DO SITE ####################
+// CONFIGRAÃ‡Ã•ES DO SITE ####################
 define('HOST', 'mysql524.umbler.com');
 define('USER', 'sigea');
 define('PASS', 'sigea@321');
 define('DBSA', 'sigea');
 
 //DEFINE DADOS SERVIDOR DE EMAIL ##################
-define('MAILUSER',''); //Email Ususario exemp: nome@gmail.com
-define('MAILPASS',''); //Senha email
+define('MAILUSER','atendimento@deepday.com.br'); //Email Ususario exemp: nome@gmail.com
+define('MAILPASS','Deepday@321'); //Senha email
 define('MAILPORT','587'); //Porta servidor SMTP
-define('MAILHOST','smtp.gmail.com'); // Host servidor
+define('MAILHOST','smtp.umbler.com'); // Host servidor
 //#####################################################
 
 // AUTO LOAD DE CLASSES ####################
@@ -36,7 +36,7 @@ function __autoload($Class) {
     endforeach;
 
     if (!$iDir):
-        trigger_error("Não foi possível incluir {$Class}.php");
+        trigger_error("NÃ£o foi possÃ­vel incluir {$Class}.php");
         die;
     endif;
 }
