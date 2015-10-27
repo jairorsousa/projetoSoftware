@@ -1,7 +1,7 @@
 <?php
 require('Library/PhpMailler/class.phpmailer.php');
 require('Library/PhpMailler/class.smtp.php');
-require_once ('app/Config.inc.php' );
+require_once ('../Config.inc.php' );
 
 
 /**

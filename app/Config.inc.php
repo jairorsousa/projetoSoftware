@@ -15,6 +15,13 @@ define('USER', 'sigea');
 define('PASS', 'sigea@321');
 define('DBSA', 'sigea');
 
+//DEFINE DADOS SERVIDOR DE EMAIL ##################
+define('MAILUSER',''); //Email Ususario exemp: nome@gmail.com
+define('MAILPASS',''); //Senha email
+define('MAILPORT','587'); //Porta servidor SMTP
+define('MAILHOST','smtp.gmail.com'); // Host servidor
+//#####################################################
+
 // AUTO LOAD DE CLASSES ####################
 function __autoload($Class) {
 
