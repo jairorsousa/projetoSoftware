@@ -37,4 +37,14 @@ class Check {
         self::$Data = self::$Data[2] . '-' . self::$Data[1] . '-' . self::$Data[0] . ' ' . self::$Format[1];
         return self::$Data;
     }
+
+    public static function DataR($Data)
+    {
+        if (!empty($Data)) {
+            $p_dt = explode('-', $Data);
+            $data_br = $p_dt[2].'/'.$p_dt[1].'/'.$p_dt[0];
+            return print $data_br;
+
+        }
+    }
 }
