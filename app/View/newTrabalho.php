@@ -7,7 +7,10 @@
         width: 82%;
         height: auto;
     }
-
+    .btnsub{
+        margin-left: 40%;
+        background: #00254A;
+    }
 </style>
 
 
@@ -36,22 +39,19 @@
           <textarea  rows="5" name="resumo" required  placeholder="Descreva um aqui um Resumo sobre seu Trabalho">
     </textarea>
         <label class="espaco">Anexar Arquivo:</label>
-        <input type="file" name="fileUpload" onblur=comprueba_extension(this.form, this.form.fileUpload.value)" required>
-        <button type="submit">Submeter Trabalho &nbsp;<i class="fa fa-upload"></i></button>
+        <input type="file" size="5000" name="fileUpload" onchange="verificaExten(this.form, this.form.fileUpload.value)" required>
+        <button class="btnsub" type="submit">Submeter Trabalho &nbsp;<i class="fa fa-upload"></i></button>
        </form>
 </section>
 <script>
-    function comprueba_extension(formulario, archivo) {
-        extensiones_permitidas = new Array(".gif", ".jpg", ".doc", ".pdf");
+    function verificaExten(formulario, archivo) {
+        extensiones_permitidas = new Array(".doc", ".docx");
         mierror = "";
         if (!archivo) {
-//Si no tengo archivo, es que no se ha seleccionado un archivo en el formulario
-            mierror = "No has seleccionado ningún archivo";
+
         }else{
-//recupero la extensión de este nombre de archivo
             extension = (archivo.substring(archivo.lastIndexOf("."))).toLowerCase();
-//alert (extension);
-//compruebo si la extensión está entre las permitidas
+
             permitida = false;
             for (var i = 0; i < extensiones_permitidas.length; i++) {
                 if (extensiones_permitidas[i] == extension) {
@@ -60,16 +60,15 @@
                 }
             }
             if (!permitida) {
-                mierror = "Comprueba la extensión de los archivos a subir. \nSólo se pueden subir archivos con extensiones: " + extensiones_permitidas.join();
+                mierror = "So é permitido anexo de arquivos " + extensiones_permitidas.join();
+                alert (mierror);
             }else{
-//submito!
-                alert ("Todo correcto. Voy a submitir el formulario.");
-                formulario.submit();
+
+
                 return 1;
             }
         }
-//si estoy aqui es que no se ha podido submitir
-        alert (mierror);
+
         return 0;
     }
 </script>

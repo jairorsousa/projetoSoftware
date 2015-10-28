@@ -27,7 +27,7 @@
         <label>Senha: </label>
         <input type="password" name="senha" required= "informe sua senha" placeholder="Informe sua Senha">
         <label class="espaco">Anexar Arquivo:</label>
-        <input type="file" name="fileUpload" required>
+        <input type="file" size="5000" name="fileUpload" onchange="verificaExten(this.form, this.form.fileUpload.value)" required>
 
 
         <button class="btnForm" type="submit">Submeter Trabalho &nbsp;<i class="fa fa-upload"></i></button>
@@ -38,4 +38,33 @@
 
 
 </section>
+<script>
+    function verificaExten(formulario, archivo) {
+        extensiones_permitidas = new Array(".doc", ".docx");
+        mierror = "";
+        if (!archivo) {
+
+        }else{
+            extension = (archivo.substring(archivo.lastIndexOf("."))).toLowerCase();
+
+            permitida = false;
+            for (var i = 0; i < extensiones_permitidas.length; i++) {
+                if (extensiones_permitidas[i] == extension) {
+                    permitida = true;
+                    break;
+                }
+            }
+            if (!permitida) {
+                mierror = "So é permitido anexo de arquivos " + extensiones_permitidas.join();
+                alert (mierror);
+            }else{
+
+
+                return 1;
+            }
+        }
+
+        return 0;
+    }
+</script>
 

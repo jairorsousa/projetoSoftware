@@ -19,10 +19,10 @@ class TrabalhoC{
         if(isset($_FILES['fileUpload']))
         {
             $nome = $this->dados['titulo'];
-            $ext = strtolower(substr($_FILES['fileUpload']['name'],-4)); //Pegando extensão do arquivo
+            $ext = strtolower(substr($_FILES['fileUpload']['name'],-4)); //Pegando extensÃ£o do arquivo
                 $new_name =  $nome . $ext; //Definindo um novo nome para o arquivo
                 $this->LinkAnexo = $new_name;
-                $dir = 'uploads/'; //Diretório para uploads
+                $dir = 'uploads/'; //DiretÃ³rio para uploads
                 move_uploaded_file($_FILES['fileUpload']['tmp_name'], $dir.$new_name); //Fazer upload do arquivo
         }else{
             echo "<script>alert('nao foi possivel anexar o arquivo!');</script>";
@@ -67,7 +67,7 @@ class TrabalhoC{
             //Enviar o Email.
             $enviarEmail = new Email();
             $DadosEmail = [
-                "Assunto" => "Confirmação da Submição de Trabalho DeepDay",
+                "Assunto" => "ConfirmaÃ§Ã£o da SubmiÃ§Ã£o de Trabalho DeepDay",
                 "Mensagem" => "Seu Trabalho foi submetido com sucesso.",
                 "RemetenteNome" => "Equipe DeepDay",
                 "RemetenteEmail" => "atendimento@deepday.com.br",
