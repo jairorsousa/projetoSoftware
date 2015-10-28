@@ -21,7 +21,7 @@ class PessoaC{
     }
     public function Pegar(){
         $this->dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        $delUltimo = array_pop($this->dados);
+        //$delUltimo = array_pop($this->dados);
 
 
         $pessoa = new Pessoa();
@@ -80,7 +80,7 @@ include_once 'app/View/footer.php';
         $dadosUp = [
             "curriculo" => $this->dados['perfil'],
             "nivel" => 1,
-            "senha" => $this->dados['senha']
+            "telefone" => $this->dados['telefone']
         ];
         $updateP->ExeUpdate('pessoas',$dadosUp, "where codigo = :id","id={$this->dados['idPes']}");
 

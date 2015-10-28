@@ -12,16 +12,21 @@ FROM autor_trabalho
 INNER JOIN pessoas ON autor_trabalho.codigo_autor = pessoas.codigo
 INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
 WHERE  pessoas.codigo = {$idpalestrante}");
-foreach($statustra->getResult() as $cat):
-    extract($cat);
-   if($status == 'N'){
-       $resultado = 'Seu Trabalho esta sendo avaliado';
-   }elseif($status == 'R'){
-       $resultado = 'Seu Trabalho não foi Aprovado';
-   }else{
-       $resultado = 'Parabéns seu Trabalho foi Aprovado';
-   }
-endforeach;
+if($statustra->getRowCount() != 0){
+    foreach($statustra->getResult() as $cat):
+        extract($cat);
+        if($status == 'N'){
+            $resultado = 'Seu Trabalho esta sendo avaliado';
+        }elseif($status == 'R'){
+            $resultado = 'Seu Trabalho não foi Aprovado';
+        }else{
+            $resultado = 'Parabéns seu Trabalho foi Aprovado';
+        }
+    endforeach;
+}else{
+    $resultado = 'Você Ainda não Submeteu Trabalho';
+}
+
 
 ?>
 <style>

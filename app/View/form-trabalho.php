@@ -24,8 +24,8 @@
         <label class="espaco">Fale Um Pouco Sobre o Você:</label>
           <textarea rows="5" name="perfil" placeholder="Descreva um aqui um Resumo sobre seu Voce">
     </textarea>
-        <label>Senha: </label>
-        <input type="password" name="senha" required= "informe sua senha" placeholder="Informe sua Senha">
+        <label>Telefone: </label>
+        <input type="text" name="telefone" required= "informe seu telefone" placeholder="Informe seu telefone">
         <label class="espaco">Anexar Arquivo:</label>
         <input type="file" size="5000" name="fileUpload" onchange="verificaExten(this.form, this.form.fileUpload.value)" required>
 

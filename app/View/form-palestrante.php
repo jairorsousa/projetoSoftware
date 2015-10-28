@@ -37,14 +37,13 @@
 
         <label>Nome: </label>
         <input class="primeiro" type="text" name="nome" placeholder="Seu Nome Completo" required="Informe seu Nome">
-        <label class="espaco">CPF: </label>
-        <!--<input class="primeiro" type="text" name="cpf" placeholder="Seu CPF">-->
+        <label class="espaco">&nbsp;CPF:&nbsp;&nbsp; </label>
         <input type="text" name="cpf" id="cpf" placeholder="Seu CPF" required onblur="javascript: validarCPF(this.value);" onkeypress="javascript: mascara(this, cpf_mask);"  maxlength="14" />
         <br>
         <label>E-mail: </label>
         <input type="email" name="email" placeholder="Seu e-mail" required>
-        <label class="espaco">Fone: </label>
-        <input type="text" name="telefone" placeholder="Seu Telefone">
+        <label class="espaco">Senha: </label>
+        <input type="password" name="senha" placeholder="Sua Senha">
         <button class="btnForm" type="submit">Avançar &nbsp;<i class="fa fa-arrow-right"></i></button>
     </form>
 

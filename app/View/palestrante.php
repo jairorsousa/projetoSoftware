@@ -29,6 +29,7 @@
         <thead>
         <tr>
 
+            <td>Tipo</td>
             <td>Nome</td>
             <td>Titulo</td>
 
@@ -36,18 +37,15 @@
         </thead>
         <?php
         $ver = new Read();
-        $ver->FullRead("SELECT pessoas.nome, trabalhos.titulo
-FROM autor_trabalho
-INNER JOIN pessoas ON autor_trabalho.codigo_autor = pessoas.codigo
-INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
-WHERE  status = 'A'");
+        $ver->FullRead("SELECT tipo_atividades.nome AS atividade, pessoas.nome, trabalhos.titulo FROM autor_trabalho INNER JOIN pessoas ON autor_trabalho.codigo_autor = pessoas.codigo INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo INNER JOIN tipo_atividades on trabalhos.tipo_atividade = tipo_atividades.codigo WHERE status = 'A'");
         foreach($ver->getResult() as $result):
             extract($result);
             ?>
             <tr>
-
+                <td><?=$atividade?></td>
                 <td><?=$nome?></td>
                 <td><?=$titulo?></td>
+
 
 
 

@@ -77,13 +77,20 @@ INNER JOIN trabalhos ON autor_trabalho.codigo_trabalho = trabalhos.codigo
 where pessoas.codigo = {$codPaslestrante}");
         foreach($ver->getResult() as $result):
             extract($result);
+            if($status == 'A'){
+                $resStatus = "Aprovado";
+            }elseif($status == 'R'){
+                $resStatus = "Não Aprovado";
+            }else{
+                $resStatus = "Não Avaliado";
+            }
             //$data_submetido = Check::DataR($data_submetido);
             ?>
             <tr>
 
                 <td><?=$data_submetido?></td>
                 <td><?=$titulo?></td>
-                <td>status</td>
+                <td><?=$resStatus?></td>
 
 
             </tr>
