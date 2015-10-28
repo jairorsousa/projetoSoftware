@@ -11,3 +11,4 @@ $metado = 'index';
 require_once 'app/Controller/'.$class.'.php';
 $obj = new $class();
 $obj->$metado();
+

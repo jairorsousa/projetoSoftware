@@ -43,7 +43,7 @@ class Check {
         if (!empty($Data)) {
             $p_dt = explode('-', $Data);
             $data_br = $p_dt[2].'/'.$p_dt[1].'/'.$p_dt[0];
-            return print $data_br;
+            return  $data_br;
 
         }
     }

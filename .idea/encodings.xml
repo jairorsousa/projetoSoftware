@@ -13,9 +13,7 @@
     <file url="file://$PROJECT_DIR$/app/View/palestra.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/View/palestrante.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/View/trabalhos.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/painel/loadAjax/ajax_info.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/painel/loadAjax/alunos.php" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/painel/newTrabalho.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/painel/trabalhos.php" charset="UTF-8" />
   </component>
 </project>

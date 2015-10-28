@@ -32,6 +32,13 @@
         color: #fff ;
         cursor: pointer;
     }
+    #box table {
+        background: #fff;
+    }
+    #box table thead{
+        background: #fff;
+        color: #1C3D50;
+    }
 </style>
 
 
