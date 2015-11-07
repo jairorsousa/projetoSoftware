@@ -107,7 +107,7 @@ if($statustra->getRowCount() != 0){
                 document.getElementById("box").innerHTML = xhttp.responseText;
             }
         }
-        xhttp.open("GET", "loadAjax/alunos.php", true);
+        xhttp.open("GET", "loadAjax/alunos.php");
         xhttp.send();
     }
 </script>
