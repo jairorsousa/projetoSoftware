@@ -134,4 +134,29 @@ include_once 'app/View/footer.php';
 
 
     }
+
+    public function aluno(){
+        include_once 'app/View/header.php';
+        include_once 'app/View/form-aluno.php';
+        include_once 'app/View/footer.php';
+
+    }
+
+    public function sAluno(){
+        $this->dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+        var_dump($this->dados);
+        //cadastra participante
+        $cadastrarT= new Create();
+        $Dados = [
+            "nome" => $this->dados['nome'],
+            "cpf" => $this->dados['cpf'],
+            "email" => $this->dados['email'],
+            "senha" => $this->dados['senha'],
+            "nivel" => 0
+
+        ];
+        $cadastrarT->ExeCreate('pessoas', $Dados);
+        echo "<script>alert('Seu Cadastro foi realizado com sucesso!');</script>";
+        echo "<script>window.location.assign('".BASE."/painel')</script>";
+    }
 }

@@ -22,7 +22,7 @@
      <h3 align="center">Sistema de Gerênciamento de Eventos Acadêmicos</h3>
      <div class="butoes">
      <a href="<?=BASE?>painel/"><button>Login &nbsp;<i class="fa fa-user"></i></button></a>
-
      <a href="s.php?c=PessoaC&m=index"><button>Submeter Trabalhos &nbsp; <i class="fa fa-upload"></i></button></a>
+         <a href="<?=BASE?>s.php?c=PessoaC&m=aluno"><button>Cadastrar &nbsp;<i class="fa fa-user"></i></button></a>
      </div>
  </section>

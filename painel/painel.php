@@ -49,8 +49,10 @@ endif;
                 $acesso =  "dashboard";
             }elseif($userlogin['nivel'] == 3){
                 echo 'Administrador';
-                $acesso =  "dashboard";}elseif($userlogin['nivel'] == 2){
-                echo 'Organizador';}else{
+                $acesso =  "dashboard";}elseif($userlogin['nivel'] == 0){
+                echo 'Participante';
+                $acesso =  "dashboardPar";
+            }else{
                 echo "Palestrante";
                 $acesso  =  "dashboardPal";
             }

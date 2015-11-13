@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bc33ce73-4a61-4cfd-b804-3ee441aa5ac3" name="deepday" url="http://deepday.com.br">
+        <fileTransfer host="deepday-com-br.umbler.net" port="21" rootFolder="/public/sigea" password="dfc9df8cdfeadf9fdf90dfdbdfdedf8bdfe0dfdcdfcfdf82df91dfd1df9a" username="deepday-com-br">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
